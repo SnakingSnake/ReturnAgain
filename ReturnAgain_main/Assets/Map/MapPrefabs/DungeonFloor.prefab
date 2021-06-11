@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7836460551849836949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7836460551849836951}
+  - component: {fileID: 9116471261215203160}
+  m_Layer: 0
+  m_Name: DungeonFloor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7836460551849836951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836460551849836949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9116471261215203160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836460551849836949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b61ee599d26cd041b17263f579ab7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorList:
+  - {fileID: 967628911104790167, guid: 4388f7855df6dc442ba6c0fb779b966d, type: 3}
+  - {fileID: 948516806015842940, guid: 0aaba8db333054d4c9d277d27f9dc9ff, type: 3}
+  - {fileID: 107280870487806996, guid: 166129c53f9b3134abf865bae1b22af2, type: 3}
+  - {fileID: 3246954610637870994, guid: 2ddbc119ed8485c4a81f711cf8ed03f7, type: 3}
+  - {fileID: 2421529140049786947, guid: 393e5ab9c11da6545bda699204cb71ba, type: 3}
+  - {fileID: 6079138510051484794, guid: 245dcacc56785aa4b9dfb60f6cb4f956, type: 3}
+  - {fileID: 4770095237117594128, guid: 4d016612d29fdc54dacd0fe7b529a936, type: 3}
