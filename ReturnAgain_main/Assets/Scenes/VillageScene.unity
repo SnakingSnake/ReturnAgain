@@ -15753,6 +15753,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
+      propertyPath: maxMoney
+      value: 999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
+        type: 3}
       propertyPath: invenPanel
       value: 
       objectReference: {fileID: 97028997}

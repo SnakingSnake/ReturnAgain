@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public GameObject itemHeart;
     public GameObject itemShild;
     public GameObject itemWeapon;
+    public GameObject itemRange;
     public GameObject target;
     public bool isChase;
     public bool isAttack;
@@ -445,21 +446,28 @@ public class Enemy : MonoBehaviour
 
             int ran = Random.Range(0, 10);
             int rand = Random.Range(0, 10);
-            if (ran < 5) //Money 60퍼
+            if (enemyType != Type.BossGolin)
             {
-                Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
-            }
-            else if (ran < 7.5f) //Heart 25퍼
-            {
-                Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
-            }
-            else if (ran < 9) //Shild 10퍼
-            {
-                Instantiate(itemShild, transform.position, itemShild.transform.rotation);
-            }
-            else if (ran < 10) //Weapon 10퍼
-            {
-                Instantiate(itemWeapon, transform.position, itemWeapon.transform.rotation);
+                if (ran < 5) //Money 60퍼
+                {
+                    Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
+                }
+                else if (ran < 8f) //Heart 25퍼
+                {
+                    Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
+                }
+                else if (ran < 9f) //Shild 10퍼
+                {
+                    Instantiate(itemShild, transform.position + new Vector3(0, 0.7f, 0), itemShild.transform.rotation);
+                }
+                else if (ran < 9.5f) //Weapon 10퍼
+                {
+                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.2f, 0), itemWeapon.transform.rotation);
+                }
+                else if (ran < 10f) //Weapon 10퍼
+                {
+                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.5f, 0), itemWeapon.transform.rotation);
+                }
             }
 
             if (enemyType != Type.BossGolin)

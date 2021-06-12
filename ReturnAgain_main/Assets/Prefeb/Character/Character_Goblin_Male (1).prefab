@@ -281,6 +281,8 @@ MonoBehaviour:
     type: 3}
   itemWeapon: {fileID: 6992454709103673995, guid: db42da9133f17644fb718f556dbbb79b,
     type: 3}
+  itemRange: {fileID: 313250087140512396, guid: 1a621f68b43998e449d8838d20af36a1,
+    type: 3}
   target: {fileID: 0}
   isChase: 0
   isAttack: 0
