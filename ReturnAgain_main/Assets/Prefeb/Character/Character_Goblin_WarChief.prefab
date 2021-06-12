@@ -1875,19 +1875,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 8
-  maxHealth: 200
-  curHealth: 200
+  maxHealth: 250
+  curHealth: 250
   meleeArea: {fileID: 5061283664062573284}
   magic: {fileID: 0}
   itemMoney: {fileID: 0}
   itemHeart: {fileID: 0}
   itemShild: {fileID: 0}
   itemWeapon: {fileID: 0}
+  itemRange: {fileID: 0}
   target: {fileID: 0}
   isChase: 0
   isAttack: 0
   isDead: 0
   isGetHit: 0
+  HPbar: {fileID: 0}
   audioAttack: {fileID: 8300000, guid: a09b9e751ffd8c445830a8081c481ff2, type: 3}
   audioHit: {fileID: 0}
   audioDeath: {fileID: 0}

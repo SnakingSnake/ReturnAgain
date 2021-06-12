@@ -2299,8 +2299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
-  maxHealth: 200
-  curHealth: 200
+  maxHealth: 100
+  curHealth: 100
   meleeArea: {fileID: 4905814321254008836}
   magic: {fileID: 0}
   itemMoney: {fileID: 212998152194622337, guid: a3453f1de3163af48b38c033cf5b27d7,

@@ -15776,11 +15776,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8094185160324416598, guid: 4f0e6969054564c41a9a67b677ad9012,
+        type: 3}
+      propertyPath: damage
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8094185160493544259, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2a23167c0fe318144b05a634f6bcba86, type: 2}
+    - target: {fileID: 8094185160574354165, guid: 4f0e6969054564c41a9a67b677ad9012,
+        type: 3}
+      propertyPath: damage
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8094185160912864171, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15791,6 +15801,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2a23167c0fe318144b05a634f6bcba86, type: 2}
+    - target: {fileID: 8094185161015089875, guid: 4f0e6969054564c41a9a67b677ad9012,
+        type: 3}
+      propertyPath: damage
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f0e6969054564c41a9a67b677ad9012, type: 3}
 --- !u!114 &241617162 stripped
@@ -60227,7 +60242,7 @@ MonoBehaviour:
   go_DialogueNameBar: {fileID: 5826544191165759865}
   txt_Dialogue: {fileID: 5826544191055457614}
   txt_Name: {fileID: 5826544191669837013}
-  textDelay: 0.1
+  textDelay: 0.05
 --- !u!1001 &1315362023
 PrefabInstance:
   m_ObjectHideFlags: 0
