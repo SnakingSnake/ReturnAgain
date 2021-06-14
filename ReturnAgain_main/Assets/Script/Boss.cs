@@ -84,7 +84,7 @@ public class Boss : Enemy
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
-            lookVec = new Vector3(h, 0, v) * 0f;
+            lookVec = new Vector3(h, 0, v) * 0.2f;
             transform.LookAt(target.transform.position + lookVec);
         }
         else if (!isLook)
@@ -157,11 +157,13 @@ public class Boss : Enemy
     IEnumerator Primary2()
     {
         anim.SetTrigger("doPrimary1");
+        isLook = false;
         meleeArea.enabled = true;
         yield return new WaitForSeconds(1.12f);
         meleeArea.enabled = false;
         PlaySound("Attack1");
         yield return new WaitForSeconds(1f);
+        isLook = true;
 
         StartCoroutine(Think());
     }
@@ -187,8 +189,8 @@ public class Boss : Enemy
     }
     IEnumerator Pattern2()
     {
-        isLook = false;
         anim.SetTrigger("doPattern2");
+        isLook = false;
         meleeArea.enabled = true;
         yield return new WaitForSeconds(0.82f);
         PlaySound("Attack1");
@@ -216,10 +218,10 @@ public class Boss : Enemy
         yield return new WaitForSeconds(1f);
         PlaySound("Attack1");
         patternArea.enabled = true;
-        yield return new WaitForSeconds(1.11f);
-        patternArea.enabled = false;
         isLook = true;
         nav.isStopped = true;
+        yield return new WaitForSeconds(1.11f);
+        patternArea.enabled = false;
         yield return new WaitForSeconds(1f);
 
         StartCoroutine(Think());
