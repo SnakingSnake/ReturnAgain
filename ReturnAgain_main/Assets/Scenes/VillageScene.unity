@@ -15758,6 +15758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
+      propertyPath: state
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
+        type: 3}
       propertyPath: maxMoney
       value: 999999
       objectReference: {fileID: 0}
@@ -42083,10 +42088,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 4900864dce9020645bcf145331e577df, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0

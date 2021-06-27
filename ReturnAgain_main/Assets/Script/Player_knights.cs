@@ -26,6 +26,8 @@ public class Player_knights : MonoBehaviour
     public float speed;
     public Camera followCamera;
 
+    public float plusTime;
+    public float state;
     public int heart;
     public int money;
     public int hasShild = 0;
@@ -146,6 +148,11 @@ public class Player_knights : MonoBehaviour
             Die();
         }
         followCamera = Camera.main;
+        if (state < 100)
+        {
+            plusTime = Time.deltaTime;
+            state += plusTime;
+        }
     }
     void FreezeRotation()
     {
@@ -625,8 +632,9 @@ public class Player_knights : MonoBehaviour
 
     void Diveroll()
     {
-        if (dDown && moveVec != Vector3.zero && !isDiveroll)
+        if (dDown && moveVec != Vector3.zero && !isDiveroll && state > 10)
         {
+            state -= 10;
             diveVec = moveVec;
             speed *= 2f;
             isDiveroll = true;

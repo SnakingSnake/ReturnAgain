@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         moneyTxt.text = "" + player2.money;
         hpTxt.text = player2.heart + " / " + player2.maxHeart;
         playerHPBar.fillAmount = (float)player2.heart / player2.maxHeart;
+        playerMPBar.fillAmount = player2.state / 100;
 
         //보스 체력 UI
         if (boss != null)
