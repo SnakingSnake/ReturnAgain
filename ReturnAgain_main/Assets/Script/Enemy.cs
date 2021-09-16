@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         audio = GetComponent<AudioSource>();
+        pUser = GameObject.FindWithTag("Player").GetComponent<Player_knights>();
 
         if(enemyType != Type.BossGolin)
         Invoke("ChaseStart", 1f);
@@ -322,8 +323,14 @@ public class Enemy : MonoBehaviour
             isGetHit = true; // 트리거가 2번연속 동작하지 않게 
             Invoke("GetHitOut", 0.5f);
             curHealth -= 20; //데미지 입음
-            pUser.heart += 20;
-            anim.SetTrigger("doGetHit");
+            if(pUser.heart>=980)
+            {
+                pUser.heart = pUser.maxHeart;
+            }
+            {
+                pUser.heart += 20;
+            }                         
+            anim.SetTrigger("doGetHit"); 
             PlaySound("Hit");
             nav.enabled = false; // 데미지 입을 시 멈추게
             Invoke("MoveStop", 0.7f); // 다시 움직일 수 있게
