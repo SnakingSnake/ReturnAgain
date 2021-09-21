@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth; //최대체력
     public int curHealth; //현재체력
     public BoxCollider meleeArea;
+    public GameObject attackAlert;
     public GameObject magic;
     public GameObject itemMoney;
     public GameObject itemHeart;
@@ -200,18 +201,22 @@ public class Enemy : MonoBehaviour
                 case Type.Goblin:
                     yield return new WaitForSeconds(0.7f); //공격시간
                     meleeArea.enabled = true;
+                    attackAlert.SetActive(true);
 
                     yield return new WaitForSeconds(0.3f); //공격후 딜레이 시간
                     meleeArea.enabled = false;
+                    attackAlert.SetActive(false);
                     break;
                 case Type.Golem: //돌격형 몬스터
                     yield return new WaitForSeconds(0.1f); //공격시간
                     rigid.AddForce(transform.forward * 20, ForceMode.Impulse); //돌격 구현
                     meleeArea.enabled = true;
+                    attackAlert.SetActive(true);
 
                     yield return new WaitForSeconds(1.4f); //공격후 딜레이 시간
                     rigid.velocity = Vector3.zero; //공격 후 멈춤
                     meleeArea.enabled = false;
+                    attackAlert.SetActive(false);
                     anim.SetBool("isAttack", false);
 
                     yield return new WaitForSeconds(2f); //공격후 재추적까지의 시간
@@ -228,9 +233,11 @@ public class Enemy : MonoBehaviour
                 case Type.Ghost:
                     yield return new WaitForSeconds(0.2f); //공격시간
                     meleeArea.enabled = true;
+                    attackAlert.SetActive(true);
 
                     yield return new WaitForSeconds(1f); //공격후 딜레이 시간
                     meleeArea.enabled = false;
+                    attackAlert.SetActive(false);
                     break;
                 case Type.InstantMelee:
                     yield return new WaitForSeconds(0.7f); //공격시간
@@ -445,31 +452,58 @@ public class Enemy : MonoBehaviour
             Debug.Log("죽었어요");
 
             int ran = Random.Range(0, 10);
-            int rand = Random.Range(0, 10);
-            if (enemyType != Type.BossGolin)
+            if (enemyType == Type.Goblin)
             {
-                if (ran < 5) //Money 60퍼
+                if (ran < 8.5f) //Money 85퍼
                 {
                     Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
                 }
-                else if (ran < 8f) //Heart 25퍼
+                else if (ran < 10f) //Heart 15퍼
                 {
                     Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
                 }
-                else if (ran < 9f) //Shild 10퍼
+            }
+            else if (enemyType == Type.Mage)
+            {
+                if (ran < 8.5f) //Money 85퍼
                 {
-                    Instantiate(itemShild, transform.position + new Vector3(0, 0.7f, 0), itemShild.transform.rotation);
+                    Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
                 }
-                else if (ran < 9.5f) //Weapon 10퍼
+                else if (ran < 9.4f) //Heart 9퍼
                 {
-                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.2f, 0), itemWeapon.transform.rotation);
+                    Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
                 }
-                else if (ran < 10f) //Weapon 10퍼
+                else if (ran < 10f) //Weapon 6퍼 차후 세분화
                 {
                     Instantiate(itemWeapon, transform.position + new Vector3(0, 0.5f, 0), itemWeapon.transform.rotation);
                 }
             }
-
+            else if (enemyType == Type.Ghost)
+            {
+                if (ran < 5f) //Money 50퍼
+                {
+                    Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
+                }
+                else if (ran < 10f) //Heart 50퍼
+                {
+                    Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
+                }
+            }
+            else if (enemyType == Type.Golem)
+            {
+                if (ran < 8.5f) //Money 85퍼
+                {
+                    Instantiate(itemMoney, transform.position, itemMoney.transform.rotation) ;
+                }
+                else if (ran < 9.6f) //Heart 11퍼
+                {
+                    Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
+                }
+                else if (ran < 10f) //Shild 4퍼
+                {
+                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.5f, 0), itemWeapon.transform.rotation);
+                }
+            }
             if (enemyType != Type.BossGolin)
                 Destroy(gameObject, 1.2f);
         }
@@ -488,3 +522,24 @@ public class Enemy : MonoBehaviour
 
     }
 }
+
+                /*if (ran< 5) //Money 60퍼
+                {
+                    Instantiate(itemMoney, transform.position, itemMoney.transform.rotation);
+                }
+                else if (ran< 8f) //Heart 25퍼
+                {
+                    Instantiate(itemHeart, transform.position, itemHeart.transform.rotation);
+                }
+                else if (ran< 9f) //Shild 10퍼
+                {
+                    Instantiate(itemShild, transform.position + new Vector3(0, 0.7f, 0), itemShild.transform.rotation);
+                }
+                else if (ran< 9.5f) //Weapon 10퍼
+                {
+                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.2f, 0), itemWeapon.transform.rotation);
+                }
+                else if (ran< 10f) //Weapon 10퍼
+                {
+                    Instantiate(itemWeapon, transform.position + new Vector3(0, 0.5f, 0), itemWeapon.transform.rotation);
+                }*/
