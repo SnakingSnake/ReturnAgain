@@ -7,6 +7,11 @@ using Random = UnityEngine.Random;
 
 public class Boss : Enemy
 {
+    public GameObject patternAlert1;
+    public GameObject patternAlert2;
+    public GameObject patternAlert3;
+    public GameObject searchPoint;
+
     public Transform magicPos;
     public BoxCollider patternArea;
     public int PatternStack = 0;
@@ -140,13 +145,15 @@ public class Boss : Enemy
     {
         anim.SetTrigger("doAttack1");
         meleeArea.enabled = true;
-        yield return new WaitForSeconds(0.4f);
+        patternAlert1.SetActive(true);
+        yield return new WaitForSeconds(1.2f);
         PlaySound("Attack2");
         yield return new WaitForSeconds(0.4f);
         anim.SetTrigger("doAttack2");
         yield return new WaitForSeconds(0.4f);
         PlaySound("Attack3");
         meleeArea.enabled = true;
+        patternAlert1.SetActive(false);
         yield return new WaitForSeconds(0.4f);
 
         yield return new WaitForSeconds(1f);
@@ -159,8 +166,10 @@ public class Boss : Enemy
         anim.SetTrigger("doPrimary1");
         isLook = false;
         meleeArea.enabled = true;
+        patternAlert2.SetActive(true);
         yield return new WaitForSeconds(1.12f);
         meleeArea.enabled = false;
+        patternAlert2.SetActive(false);
         PlaySound("Attack1");
         yield return new WaitForSeconds(1f);
         isLook = true;
@@ -174,6 +183,7 @@ public class Boss : Enemy
         nav.speed = 6;
         nav.SetDestination(target.transform.position);
         meleeArea.enabled = true;
+        patternAlert3.SetActive(true);
         PlaySound("Attack2");
         yield return new WaitForSeconds(0.38f);
         PlaySound("Attack2");
@@ -182,9 +192,10 @@ public class Boss : Enemy
         yield return new WaitForSeconds(0.38f);
         PlaySound("Pattern1");
         meleeArea.enabled = false;
+        patternAlert3.SetActive(false);
         nav.isStopped = true;
         yield return new WaitForSeconds(1f);
-
+        
         StartCoroutine(Think());
     }
     IEnumerator Pattern2()
@@ -192,6 +203,7 @@ public class Boss : Enemy
         anim.SetTrigger("doPattern2");
         isLook = false;
         meleeArea.enabled = true;
+        patternAlert2.SetActive(true);
         yield return new WaitForSeconds(0.82f);
         PlaySound("Attack1");
         yield return new WaitForSeconds(0.82f);
@@ -201,12 +213,14 @@ public class Boss : Enemy
         yield return new WaitForSeconds(1f);
         isLook = true;
         meleeArea.enabled = false;
+        patternAlert2.SetActive(false);
 
         StartCoroutine(Think());
     }
     IEnumerator Search()
     {
         searchVec = target.transform.position + lookVec;
+        searchPoint.transform.position = searchVec;
 
         isLook = false;
         nav.isStopped = false;
@@ -215,6 +229,7 @@ public class Boss : Enemy
         nav.speed = 80;
         PlaySound("Search");
         patternArea.enabled = false;
+        searchPoint.SetActive(true);
         yield return new WaitForSeconds(1f);
         PlaySound("Attack1");
         patternArea.enabled = true;
@@ -222,6 +237,7 @@ public class Boss : Enemy
         nav.isStopped = true;
         yield return new WaitForSeconds(1.11f);
         patternArea.enabled = false;
+        searchPoint.SetActive(false);
         yield return new WaitForSeconds(1f);
 
         StartCoroutine(Think());

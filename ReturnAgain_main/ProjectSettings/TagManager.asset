@@ -23,6 +23,7 @@ TagManager:
   - Start
   - Interaction
   - MinimapCamera
+  - AttackAlert
   layers:
   - Default
   - TransparentFX
