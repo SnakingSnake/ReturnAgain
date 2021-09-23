@@ -5,15 +5,14 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public enum SkillName { Berserker, Giant, Bomb, Void, Heal, Reflect, AuraSword, WaterPool };
-    public SkillName skillName;
-    public GameObject pUserObject;
+    public SkillName skillName;    
     public GameObject skillEffect;
     Player_knights pUser;
 
 
     void Start()
     {
-        pUser = pUserObject.GetComponent<Player_knights>();
+        pUser = GameObject.FindWithTag("Player").GetComponent<Player_knights>();
 
     }
 

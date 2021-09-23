@@ -52,8 +52,8 @@ public class DungeonCreator : MonoBehaviour
     {
         DestroyAllChildren();
 
-        DungeonGenerator generator = new DungeonGenerator(dungeonWidth + Player_knights.dungeonLevel * 35, dungeonLength + Player_knights.dungeonLevel * 35);
-        var listOfRooms = generator.CalculateDungeon(maxIterations + Player_knights.dungeonLevel * 3,
+        DungeonGenerator generator = new DungeonGenerator(dungeonWidth + Player_knights.dungeonLevel * 10, dungeonLength + Player_knights.dungeonLevel * 10);
+        var listOfRooms = generator.CalculateDungeon(maxIterations + Player_knights.dungeonLevel * 2,
             roomWidthMin,
             roomLengthMin,
             roomBottomCornerModifier,

@@ -12,6 +12,10 @@ public class Player_knights : MonoBehaviour
 
     public GameObject[] weapons;
     public GameObject[] shild;
+    // ----------------------------------------- 설정 변수들 -------------------------------------------------------------------
+    public static int BGM_Set = 0;
+    public static int FX_Set = 0;
+    // ----------------------------------------- 설정 변수들 -------------------------------------------------------------------
     //-----------------------------------인벤토리 관련 -----------------------------
     public GameObject invenPanel;
     public Slot[] slots;
@@ -31,6 +35,9 @@ public class Player_knights : MonoBehaviour
     public int heart;
     public int money;
     public int hasShild = 0;
+    public int stamina;
+    public int maxStamina = 100;
+
 
     int shildStack = 0;
     public int maxHeart;
@@ -68,8 +75,6 @@ public class Player_knights : MonoBehaviour
 
 
     // -----------------------------------------사운드관련 변수들 -------------------------------------------------------------------
-
-
 
 
     bool iDown;
@@ -146,13 +151,10 @@ public class Player_knights : MonoBehaviour
             SkillUse();
             Inventory(); // 인벤
             Die();
+            UpState(); // 스테미너
         }
         followCamera = Camera.main;
-        if (state < 100)
-        {
-            plusTime = Time.deltaTime;
-            state += plusTime;
-        }
+        
     }
     void FreezeRotation()
     {
@@ -184,6 +186,15 @@ public class Player_knights : MonoBehaviour
         skillDown = Input.GetButtonDown("Skill");
         invenDown = Input.GetButtonDown("Inven");
         /*jDown = Input.GetButtonDown("Jump");*/
+    }
+
+    void UpState()
+    {
+        if (state < 100)
+        {
+            plusTime = Time.deltaTime;
+            state += plusTime * 3;
+        }
     }
 
     void Move() //이동

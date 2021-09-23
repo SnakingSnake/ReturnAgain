@@ -2178,15 +2178,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f7a8cedaced27428449b7691b60a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonWidth: 160
-  dungeonLength: 160
-  roomWidthMin: 25
-  roomLengthMin: 25
-  maxIterations: 18
-  corridorWidth: 5
+  dungeonWidth: 90
+  dungeonLength: 90
+  roomWidthMin: 15
+  roomLengthMin: 15
+  maxIterations: 30
+  corridorWidth: 3
   roomBottomCornerModifier: 0.1
   roomTopCornerModifier: 0.9
-  roomOffset: 1
+  roomOffset: 0
   DungeonWall: {fileID: 4769660867214052459, guid: 0037b08f1cbc0a94b89fda13395a36a0,
     type: 3}
   DungeonFloor: {fileID: 7836460551849836949, guid: 9fdea05828c5c83409b4f56991fb41db,
