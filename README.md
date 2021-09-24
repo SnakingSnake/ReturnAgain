@@ -46,9 +46,12 @@ Ver 0.18
 
 2021- 09- 24 
 Enemy attackAlert 오류 수정 
+
 Skill Use() 함수 간소화
+
 각 Skill 쿨다운 삭제 및 Mp 추가
+
 Player mp변수 추가
+
 SkillMp UI 추가 및 GameManager에 실시간 fillAmount  추가
 
-이거 왜 줄바꿈 안되냐 ;;
