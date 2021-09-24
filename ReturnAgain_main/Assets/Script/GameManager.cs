@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public Image playerHPBar;
     public Image playerMPBar;
+    public Image playerSkillBar;
     public RectTransform bossHPUI;
     public Image bossHPBar;
     void Update()
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         hpTxt.text = player2.heart + " / " + player2.maxHeart;
         playerHPBar.fillAmount = (float)player2.heart / player2.maxHeart;
         playerMPBar.fillAmount = player2.state / 100;
+        playerSkillBar.fillAmount = player2.mp / 100;
 
         //보스 체력 UI
         if (boss != null)

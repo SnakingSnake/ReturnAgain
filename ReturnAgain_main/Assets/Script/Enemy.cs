@@ -52,6 +52,15 @@ public class Enemy : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         audio = GetComponent<AudioSource>();
         pUser = GameObject.FindWithTag("Player").GetComponent<Player_knights>();
+        if(transform.Find("AttackAlert").gameObject != null)
+        {
+            attackAlert = transform.Find("AttackAlert").gameObject;
+        }
+        else
+        {
+            attackAlert = transform.Find("attackAlert").gameObject;
+        }
+        
 
         if(enemyType != Type.BossGolin)
         Invoke("ChaseStart", 1f);

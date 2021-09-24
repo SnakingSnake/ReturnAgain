@@ -28,11 +28,13 @@ public class Player_knights : MonoBehaviour
 
     public float plusTime;
     public float state;
+    public float maxState = 100;
     public int heart;
     public int money;
     public int hasShild = 0;
-    public int stamina;
-    public int maxStamina = 100;
+    
+    public float mp;
+    public float maxMp = 100;
 
 
     int shildStack = 0;
@@ -150,6 +152,7 @@ public class Player_knights : MonoBehaviour
             Inventory(); // 인벤
             Die();
             UpState(); // 스테미너
+            UpMp();
         }
         followCamera = Camera.main;
         
@@ -188,12 +191,33 @@ public class Player_knights : MonoBehaviour
 
     void UpState()
     {
+        
         if (state < 100)
         {
             plusTime = Time.deltaTime;
             state += plusTime * 3;
         }
+        else if (state > 100)
+        {
+            state = maxState;
+        }
+
     }
+
+    void UpMp()
+    {
+        if (mp < 100)
+        {
+            plusTime = Time.deltaTime;
+            mp += plusTime * 1;
+        }
+        else if (mp > 100)
+        {
+            mp = maxMp;
+        }
+    }
+
+
 
     void Move() //이동
     {

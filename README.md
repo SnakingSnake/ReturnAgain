@@ -43,3 +43,10 @@ Ver 0.18
 
 각 몬스터별 공격 전 공격 범위 표시
 각 몬스터별 드랍 아이템 조정
+
+2021- 09- 24 
+Enemy attackAlert 오류 수정 
+Skill Use() 함수 간소화
+각 Skill 쿨다운 삭제 및 Mp 추가
+Player mp변수 추가
+SkillMp UI 추가 및 GameManager에 실시간 fillAmount  추가
