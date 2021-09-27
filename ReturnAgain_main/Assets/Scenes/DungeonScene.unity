@@ -1616,6 +1616,7 @@ MonoBehaviour:
   moneyTxt: {fileID: 2138616232}
   playerHPBar: {fileID: 44583762}
   playerMPBar: {fileID: 711213209}
+  playerSkillBar: {fileID: 0}
   bossHPUI: {fileID: 1167416172}
   bossHPBar: {fileID: 689370830}
 --- !u!4 &1261008507
@@ -2178,12 +2179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f7a8cedaced27428449b7691b60a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonWidth: 160
-  dungeonLength: 160
-  roomWidthMin: 25
-  roomLengthMin: 25
-  maxIterations: 18
-  corridorWidth: 5
+  dungeonWidth: 90
+  dungeonLength: 90
+  roomWidthMin: 15
+  roomLengthMin: 15
+  maxIterations: 20
+  corridorWidth: 3
   roomBottomCornerModifier: 0.1
   roomTopCornerModifier: 0.9
   roomOffset: 1
