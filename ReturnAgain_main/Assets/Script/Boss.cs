@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Boss : Enemy
@@ -11,6 +12,9 @@ public class Boss : Enemy
     public GameObject patternAlert2;
     public GameObject patternAlert3;
     public GameObject searchPoint;
+
+    public GameObject pDialog1;
+    public GameObject pDialog2;
 
     public Transform magicPos;
     public BoxCollider patternArea;
@@ -125,11 +129,19 @@ public class Boss : Enemy
                 int ranPattern = Random.Range(0, 10);
                 if (ranPattern < 5)
                 {
+                    yield return new WaitForSeconds(0.01f);
+                    pDialog1.SetActive(true);
+                    yield return new WaitForSeconds(1.5f);
+                    pDialog1.SetActive(false);
                     StartCoroutine(Pattern1());
                     PatternStack = 0;
                 }
                 else if (ranPattern < 10)
                 {
+                    yield return new WaitForSeconds(0.01f);
+                    pDialog2.SetActive(true);
+                    yield return new WaitForSeconds(1.5f);
+                    pDialog2.SetActive(false);
                     StartCoroutine(Pattern2());
                     PatternStack = 0;
                 }
