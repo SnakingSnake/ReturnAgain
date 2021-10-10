@@ -8697,6 +8697,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1894416084}
     m_Modifications:
+    - target: {fileID: 357882667311075968, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 366521305857151583, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 366521305857151583, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814632448213158411, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285326726710769310, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797374265443508823, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5058405530318710237, guid: 71ed24ff1781890448dfb7da286ffb9d,
         type: 3}
       propertyPath: m_RootOrder
@@ -8778,6 +8808,21 @@ PrefabInstance:
       propertyPath: audioSearch
       value: 
       objectReference: {fileID: 8300000, guid: 812f08c676bb9f349a2d923981273ee7, type: 3}
+    - target: {fileID: 8125259038821728869, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435719920422320836, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646031588992830270, guid: 71ed24ff1781890448dfb7da286ffb9d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ed24ff1781890448dfb7da286ffb9d, type: 3}
 --- !u!1001 &849553022

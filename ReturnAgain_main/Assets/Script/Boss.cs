@@ -104,7 +104,7 @@ public class Boss : Enemy
     {
         yield return new WaitForSeconds(0.5f); //난이도 조정 공격 시간
 
-        if (Vector3.Distance(target.transform.position, transform.position) <= 100f && Vector3.Distance(target.transform.position, transform.position) > 15f)
+        if (Vector3.Distance(target.transform.position, transform.position) <= 25f && Vector3.Distance(target.transform.position, transform.position) > 15f)
         {
             StartCoroutine(Search());
         }
@@ -130,18 +130,18 @@ public class Boss : Enemy
                 if (ranPattern < 5)
                 {
                     yield return new WaitForSeconds(0.01f);
-                    pDialog1.SetActive(true);
+                    pDialog2.SetActive(true);
                     yield return new WaitForSeconds(1.5f);
-                    pDialog1.SetActive(false);
+                    pDialog2.SetActive(false);
                     StartCoroutine(Pattern1());
                     PatternStack = 0;
                 }
                 else if (ranPattern < 10)
                 {
                     yield return new WaitForSeconds(0.01f);
-                    pDialog2.SetActive(true);
+                    pDialog1.SetActive(true);
                     yield return new WaitForSeconds(1.5f);
-                    pDialog2.SetActive(false);
+                    pDialog1.SetActive(false);
                     StartCoroutine(Pattern2());
                     PatternStack = 0;
                 }
@@ -160,7 +160,7 @@ public class Boss : Enemy
         patternAlert1.SetActive(true);
         yield return new WaitForSeconds(1.2f);
         PlaySound("Attack2");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.1f);
         anim.SetTrigger("doAttack2");
         yield return new WaitForSeconds(0.4f);
         PlaySound("Attack3");
