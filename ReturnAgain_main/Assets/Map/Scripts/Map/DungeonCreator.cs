@@ -182,7 +182,7 @@ public class DungeonCreator : MonoBehaviour
         int enemyz;
         Vector3Int enemyPosition;
 
-        for (int i = 0;i<((Player_knights.dungeonLevel*2)+5+((int)(distance/10))) ;i++)
+        for (int i = 0;i<((Player_knights.dungeonLevel)+3+((int)(distance/10))) ;i++)
         {
             while (true)
             {
@@ -330,12 +330,12 @@ public class DungeonCreator : MonoBehaviour
 
     private bool CreateSE(Vector2 bottomLeftCorner1, Vector2 topRightCorner1, Vector2 bottomLeftCorner2, Vector2 topRightCorner2, GameObject seParent)
     {
-        Vector3Int startPortalVector = new Vector3Int(Random.Range((int)bottomLeftCorner1.x+4, (int)topRightCorner1.x-4), 0, Random.Range((int)bottomLeftCorner1.y+4, (int)topRightCorner1.y-4));
-        Vector3Int endPortalVector = new Vector3Int(Random.Range((int)bottomLeftCorner2.x + 6, (int)topRightCorner2.x - 6), 0, Random.Range((int)bottomLeftCorner2.y + 6, (int)topRightCorner2.y - 6));
+        Vector3Int startPortalVector = new Vector3Int(Random.Range((int)bottomLeftCorner1.x+1, (int)topRightCorner1.x-1), 0, Random.Range((int)bottomLeftCorner1.y+1, (int)topRightCorner1.y-1));
+        Vector3Int endPortalVector = new Vector3Int(Random.Range((int)bottomLeftCorner2.x + 1, (int)topRightCorner2.x - 1), 0, Random.Range((int)bottomLeftCorner2.y + 1, (int)topRightCorner2.y - 1));
 
         float portaldistance = Vector3.Distance(startPortalVector,endPortalVector);
 
-        if (portaldistance >= 100)
+        if (portaldistance >= 60)
         {
             soRotation = Quaternion.Euler(0f, Random.Range(0, 4) * 90, 0f);
             Instantiate(startPortal, startPortalVector, soRotation, seParent.transform);

@@ -26,6 +26,7 @@ public class Boss : Enemy
     public AudioClip audioSearch;
     public AudioClip audioPattern1;
     public AudioClip audioPattern2;
+    public AudioClip Clear;
 
     Vector3 lookVec; //이동경로 예측;
     Vector3 searchVec; //점프
@@ -87,6 +88,10 @@ public class Boss : Enemy
         if (isDead)
         {
             StopAllCoroutines();
+            Destroy(GameObject.FindWithTag("BossDoor"));
+            audio.clip = Clear;
+            audio.volume = 0.7f;
+            audio.Play();
             return;
         }
         if (isLook)

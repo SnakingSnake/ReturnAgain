@@ -24,6 +24,7 @@ TagManager:
   - Interaction
   - MinimapCamera
   - AttackAlert
+  - BossDoor
   layers:
   - Default
   - TransparentFX
