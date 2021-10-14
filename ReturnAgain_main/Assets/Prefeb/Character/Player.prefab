@@ -48818,7 +48818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 7
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 1000014033464604, guid: 6944f6af78c9b6e4abbfe93e67f234cb,
     type: 3}
 --- !u!114 &8094185159656634364
@@ -49077,7 +49076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 4
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 7311776686887849446, guid: e580c2cdf7734224bb22ec39b7707698,
     type: 3}
 --- !u!114 &8094185159762557046
@@ -54360,11 +54358,16 @@ MonoBehaviour:
   slots: []
   slotHolder: {fileID: 0}
   hasWeapons: 0000
-  speed: 1
+  speed: 2
   followCamera: {fileID: 0}
+  plusTime: 0
+  state: 0
+  maxState: 100
   heart: 1000
   money: 0
   hasShild: 0
+  mp: 0
+  maxMp: 100
   maxHeart: 1000
   maxMoney: 0
   maxHasShild: 4
@@ -74006,7 +74009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 2
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: -1620112096018254271, guid: b71dd159a01c6a44fb2a9b726ce8537c,
     type: 3}
 --- !u!114 &8094185160161135759
@@ -74346,7 +74348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 0
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 8094185159988726023}
 --- !u!114 &8094185160324416598
 MonoBehaviour:
@@ -75126,7 +75127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 3
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 5741469288618199325, guid: 3083aafe680b224488ba8994e632ad46,
     type: 3}
 --- !u!114 &8094185160516710614
@@ -80395,7 +80395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 1
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 0}
 --- !u!114 &8094185160574354165
 MonoBehaviour:
@@ -105967,7 +105966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 5
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 8094185161266400530}
 --- !u!114 &8094185161015089875
 MonoBehaviour:
@@ -120950,7 +120948,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 6
-  pUserObject: {fileID: 8094185159875261755}
   skillEffect: {fileID: 180852, guid: fd1777bfacccb64409754d5abf7671cb, type: 3}
 --- !u!114 &8094185161193426555
 MonoBehaviour:

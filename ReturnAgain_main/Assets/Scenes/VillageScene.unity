@@ -15764,7 +15764,7 @@ PrefabInstance:
     - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
       propertyPath: speed
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094185159875261754, guid: 4f0e6969054564c41a9a67b677ad9012,
         type: 3}
@@ -28797,6 +28797,7 @@ MonoBehaviour:
   playerHPBar: {fileID: 1651957845}
   playerMPBar: {fileID: 921571381}
   playerSkillBar: {fileID: 1488755925}
+  playerStat: {fileID: 921571381}
   bossHPUI: {fileID: 1535440891}
   bossHPBar: {fileID: 2074396653}
 --- !u!4 &633666483

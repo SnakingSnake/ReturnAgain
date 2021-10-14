@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Image playerHPBar;
     public Image playerMPBar;
     public Image playerSkillBar;
+    public Image playerStat;
     public RectTransform bossHPUI;
     public Image bossHPBar;
     void Update()
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         //플레이어 UI
         moneyTxt.text = "" + player2.money;
         hpTxt.text = player2.heart + " / " + player2.maxHeart;
+        playerStat.fillAmount = (float)player2.state / player2.maxState;
         playerHPBar.fillAmount = (float)player2.heart / player2.maxHeart;
         playerMPBar.fillAmount = player2.state / 100;
         playerSkillBar.fillAmount = player2.mp / 100;

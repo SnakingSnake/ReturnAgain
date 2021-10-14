@@ -2136,6 +2136,36 @@ Transform:
   m_Father: {fileID: 721863902999456088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4388926570507696589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7918903633287392749}
+  m_Layer: 11
+  m_Name: AttackAlert
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7918903633287392749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388926570507696589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7100506318147239974}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4561226253444063277
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,6 +4269,7 @@ Transform:
   - {fileID: 7804551351009677170}
   - {fileID: 5621880355688940829}
   - {fileID: 4081976762539566862}
+  - {fileID: 7918903633287392749}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -4307,6 +4338,7 @@ MonoBehaviour:
   maxHealth: 25
   curHealth: 25
   meleeArea: {fileID: 0}
+  attackAlert: {fileID: 4388926570507696589}
   magic: {fileID: 4515552709424338957, guid: b95d8b6ee0d4b874cb15d71a5e8f6634, type: 3}
   itemMoney: {fileID: 212998152194622337, guid: a3453f1de3163af48b38c033cf5b27d7,
     type: 3}
